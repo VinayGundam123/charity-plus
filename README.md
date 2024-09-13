@@ -54,7 +54,7 @@ An Organization can
 * Leaderboard can be toggled to shows the users in ascending/descending order of their all time stars or monthly stars.
 ## View live App
 
-Hosted at **https://charityplus.onrender.com**
+
 
 
 ## Tech Stack Used
@@ -72,117 +72,7 @@ Hosted at **https://charityplus.onrender.com**
 * [Mongoose](https://mongoosejs.com/docs/guide.html) - ODM for MongoDB
 * [Cloudinary](https://cloudinary.com/documentation) - Cloud server to store the images
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
-
-Your machine should have npm and node.js installed to use it locally.
-
-### Setup and Installation
-
-
-1. First fork the repo to your account.  
-   Go to the forked repo and clone it to your local machine:
-
-```sh
-git clone https://github.com/Your_Username/charityplus.git
-```
-
-This will make a copy of the code to your local machine.
-
-2. Now move to the `charityplus` directory.
-
-```sh
-cd charityplus
-```
-
-3. Now check the remote of your local code by:
-
-```sh
-git remote -v
-```
-
-The response should look like:
-
-```sh
-origin	https://github.com/Your_Username/charityplus.git (fetch)
-origin	https://github.com/Your_Username/charityplus.git (push)
-```
-
-To add upstream to remote, run:
-
-```sh
-git remote add upstream https://github.com/milan0027/charityplus.git
-```
-
-Again run `git remote -v`, the response should look like:
-
-```sh
-origin	https://github.com/Your_Username/charityplus.git (fetch)
-origin	https://github.com/Your_Username/charityplus.git (push)
-upstream	https://github.com/milan0027/charityplus (fetch)
-upstream	https://github.com/milan0027/charityplus (push)
-```
-
-4. Once the remote is set, install all the necessary dependencies by the following command:
-
-```sh
-npm install
-```
-5. Move to `client` folder and install all the necessary dependencies by the following command:
-
-```sh
-cd client
-npm install
-cd ..
-```
-
-6. Create a `.env` file in the `charityplus` directory and add the following
-```sh
-DB_URL=YOUR_MONGODB_URL
-```
-
-### Run locally
-
-Run the below command to start the app:
-
-```sh
-npm run dev
-```
-* The **server** runs on port **6000**
-* The **client** side runs on port **3000**
-* Both client and server must run **concurrently.**
-**Go to: [http://localhost:3000](http://localhost:3000)**
-
-
-## Deployment
-
-1. Add the following lines to server.js :
-
-```(JavaScript)
-// Serve static assets if in production
-if (process.env.NODE_ENV === 'production') {
-    // Set static folder
-    app.use(express.static('client/build'));
-  
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-    });
-  }
-```
-2. Add the following script to the package.json of server
-
-```(JSON)
-"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-```
-
-3. Install Heroku CLI and make sure you have intialised a git repository in the project directory. Enter the following commands in the terminal :
-
-```(bash)
-heroku login
-heroku create
 git add .
 git commit -am "Deployed to Heroku"
 git push heroku master
