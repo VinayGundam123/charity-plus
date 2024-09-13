@@ -72,10 +72,3 @@ An Organization can
 * [Mongoose](https://mongoosejs.com/docs/guide.html) - ODM for MongoDB
 * [Cloudinary](https://cloudinary.com/documentation) - Cloud server to store the images
 
-
-git add .
-git commit -am "Deployed to Heroku"
-git push heroku master
-```
-4. Open your heroku account and in settings configure **MongoURI** variable.
-5. Open your heroku account and click on **Open App** option in the dashboard.
